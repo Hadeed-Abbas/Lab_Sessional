@@ -27,30 +27,30 @@ jobs:
 
     - name: Build and Push Customer Service
       run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/customer-services:latest ./Labs_Sessional/Cafe_Management_System/customer-services
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/customer-services:latest ./Cafe_Management_System/customer-services
           docker push ${{ secrets.DOCKER_USERNAME }}/customer-services:latest
 
     - name: Build and Push Inventory Service
       run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/inventory-services:latest ./Labs_Sessional/Cafe_Management_System/inventory-services
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/inventory-services:latest ./Cafe_Management_System/inventory-services
           docker push ${{ secrets.DOCKER_USERNAME }}/inventory-services:latest
 
     - name: Build and Push Menu Service
       run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/menu-services:latest ./Labs_Sessional/Cafe_Management_System/menu-services
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/menu-services:latest ./Cafe_Management_System/menu-services
           docker push ${{ secrets.DOCKER_USERNAME }}/menu-services:latest
 
     - name: Build and Push Order Service
       run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/order-services:latest ./Labs_Sessional/Cafe_Management_System/order-services
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/order-services:latest ./Cafe_Management_System/order-services
           docker push ${{ secrets.DOCKER_USERNAME }}/order-services:latest
 
     - name: Build and Push Menu Service
       run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/payment-services:latest ./Labs_Sessional/Cafe_Management_System/payment-services
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/payment-services:latest ./Cafe_Management_System/payment-services
           docker push ${{ secrets.DOCKER_USERNAME }}/payment-services:latest
           
     - name: Build and Push Gateway
       run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/api-gateway:latest ./gateway
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/api-gateway:latest ./Cafe_Management_System/api-gateway
           docker push ${{ secrets.DOCKER_USERNAME }}/gateway:latest
